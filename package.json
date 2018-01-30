@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint-fix && NODE_ENV=test mocha -R spec -t 50000 -r should --recursive test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/kalengo/klg-app.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "config": "^1.29.2",
+    "mongoose": "^4.11.3",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-unique-validator": "^1.0.5"
+  }
+}

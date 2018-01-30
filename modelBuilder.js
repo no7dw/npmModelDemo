@@ -23,7 +23,7 @@ class ModelBuilder {
     schema.plugin(uniqueValidator);
     schema.plugin(mongoosePaginate);
 
-    const connection = require('../connection').dbs.get(db);
+    const connection = require('./connection').dbs.get(db);
     const model = connection.model(name, schema);
     model.ObjectId = mongoose.Types.ObjectId;
 

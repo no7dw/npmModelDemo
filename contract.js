@@ -2,8 +2,7 @@ const ModelBuilder = require('./modelBuilder.js');
 
 module.exports = ModelBuilder.build({
   name: 'contract',
-  attributes: {
-    user_id: {type: String, required: true, index: true},
+  attributes: {user_id: {type: String, required: true, index: true},
     time: {type: Number, required: true},
     type: {type: Number, required: true}, // 合同类型：(1: 用户服务协议)
     request_id: {type: String, required: true}, // 请求id

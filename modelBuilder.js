@@ -6,7 +6,7 @@ class ModelBuilder {
   /*
   * db : default db
   */
-  static build ({name = '', db = 'test', attributes = {}, statics = {}, methods = {}, index = {}}) {
+  static build ({name = '', db = 'test', attributes = {}, statics = {}, methods = {}, index = {}, dbcon = {} }) {
     const schema = new mongoose.Schema(attributes);
 
     schema.set('timestamps', true); // createAt, updatedAt -> UTC
@@ -23,7 +23,7 @@ class ModelBuilder {
     schema.plugin(uniqueValidator);
     schema.plugin(mongoosePaginate);
 
-    const connection = require('./connection').dbs.get(db);
+    const connection = dbcon;
     const model = connection.model(name, schema);
     model.ObjectId = mongoose.Types.ObjectId;
 

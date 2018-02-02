@@ -4,7 +4,7 @@
   "description": "app",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec -t 50000 -r should --recursive test"
+    "test": "mocha -R spec -t 5000 -r should --recursive test"
   },
   "repository": {
     "type": "git",
